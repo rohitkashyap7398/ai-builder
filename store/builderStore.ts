@@ -9,6 +9,9 @@ type BuilderStore = {
   updateHeroHeading: (heading: string) => void;
   updateHeroSubHeading: (subHeading: string) => void;
   updateHeroButton: (button: string) => void;
+
+  updateAboutTitle: (title: string) => void;
+  updateAboutDescription: (description: string) => void;
 };
 
 export const useBuilderStore = create<BuilderStore>((set) => ({
@@ -45,6 +48,28 @@ export const useBuilderStore = create<BuilderStore>((set) => ({
         hero: {
           ...state.website.hero,
           button,
+        },
+      },
+    })),
+
+  updateAboutTitle: (title) =>
+    set((state) => ({
+      website: {
+        ...state.website,
+        about: {
+          ...state.website.about,
+          title,
+        },
+      },
+    })),
+
+  updateAboutDescription: (description) =>
+    set((state) => ({
+      website: {
+        ...state.website,
+        about: {
+          ...state.website.about,
+          description,
         },
       },
     })),

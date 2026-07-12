@@ -1,8 +1,13 @@
 export const companyTemplate = {
   navbar: {
-    logo: "TheCodeSpark",
-    links: ["Home", "Services", "About", "Contact"],
-  },
+  logo: "TheCodeSpark",
+  links: [
+    { label: "Home", href: "#" },
+    { label: "Services", href: "#services" },
+    { label: "About", href: "#about" },
+    { label: "Contact", href: "#contact" },
+  ],
+},
 
   hero: {
     heading: "Build the Future with Technology",
