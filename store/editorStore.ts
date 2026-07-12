@@ -7,9 +7,6 @@ type EditorStore = {
 
 export const useEditorStore = create<EditorStore>((set) => ({
   selectedComponent: "Hero",
-
   setSelectedComponent: (component) =>
-    set({
-      selectedComponent: component,
-    }),
+    set({ selectedComponent: component }),
 }));
